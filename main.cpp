@@ -11,7 +11,7 @@ Punct fun1(Punct P)
     float y = 0.16 * y;
 
     Punct rez(x,y);
-    //cout<<"1) "<<P<<" -> "<<rez<<"\n";
+
     return rez;
 }
 
@@ -21,7 +21,7 @@ Punct fun2(Punct P)
     float y = -0.04 * P.getx() + 0.85 * P.gety() + 1.6;
 
     Punct rez(x,y);
-    //cout<<"2) "<<P<<" -> "<<rez<<"\n";
+
     return rez;
 }
 
@@ -31,7 +31,7 @@ Punct fun3(Punct P)
     float y = 0.23 * P.getx() + 0.22 * P.gety() + 1.6;
 
     Punct rez(x,y);
-    //cout<<"3) "<<P<<" -> "<<rez<<"\n";
+
     return rez;
 }
 
@@ -41,7 +41,6 @@ Punct fun4(Punct P)
     float y = 0.26 * P.getx() + 0.24 * P.gety() + 0.44;
 
     Punct rez(x,y);
-    //cout<<"4) "<<P<<" -> "<<rez<<"\n";
 
     return rez;
 }
@@ -58,14 +57,14 @@ Punct randomFun (Punct P)
     else return fun4(P);
 }
 
-void drawScaledPoint(Punct P, unsigned int aDelay = 0, float lwrScale = -1, float upprScale = 1)
+void drawScaledPoint(Punct P, unsigned int aDelay = 0)
 {
 
-    float x = P.getx() * 100; ///map(P.getx(),lwrScale,upprScale,600, 700);
-    float y = P.gety() * 100; ///map(P.gety(),lwrScale,upprScale,600, 700);
+    float x = P.getx() * 100;
+    float y = P.gety() * 100;
 
     Punct altu(x,y);
-    drawPoint(P,aDelay);
+    drawDot(P,aDelay,LIGHTGREEN);
 }
 
 int gm, gd = DETECT;
@@ -80,7 +79,7 @@ int main()
     while (true)
     {
         P = randomFun(P);
-        drawScaledPoint(P,1,-2,3);
+        drawScaledPoint(P,0);
 
     }
     getch();
