@@ -18,13 +18,15 @@ class Punct
     float x,y;
     float scale;
 public:
-    Punct (float xx=0,float yy=0)
-    {x=xx;y=yy;}
+    Punct (float xx=0,float yy=0,float scl=40)
+    {x=xx;y=yy;
+    scale = scl;
+    }
     float getx () { return x; }
     float gety () { return y; }
 
     int getGhX () { return 300 + x*scale; }
-    int getGhY () { return 300 - y*scale; }
+    int getGhY () { return 400 - y*scale; }
 
     void set(float xx, float yy) {x=xx;y=yy;}
 

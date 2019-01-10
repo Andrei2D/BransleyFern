@@ -11,6 +11,7 @@ Punct fun1(Punct P)
     float y = 0.16 * y;
 
     Punct rez(x,y);
+    //cout<<"1) "<<P<<" -> "<<rez<<"\n";
     return rez;
 }
 
@@ -20,6 +21,7 @@ Punct fun2(Punct P)
     float y = -0.04 * P.getx() + 0.85 * P.gety() + 1.6;
 
     Punct rez(x,y);
+    //cout<<"2) "<<P<<" -> "<<rez<<"\n";
     return rez;
 }
 
@@ -29,6 +31,7 @@ Punct fun3(Punct P)
     float y = 0.23 * P.getx() + 0.22 * P.gety() + 1.6;
 
     Punct rez(x,y);
+    //cout<<"3) "<<P<<" -> "<<rez<<"\n";
     return rez;
 }
 
@@ -38,7 +41,7 @@ Punct fun4(Punct P)
     float y = 0.26 * P.getx() + 0.24 * P.gety() + 0.44;
 
     Punct rez(x,y);
-    cout<<P<<" -> ">>rez<<"
+    //cout<<"4) "<<P<<" -> "<<rez<<"\n";
 
     return rez;
 }
@@ -46,7 +49,7 @@ Punct fun4(Punct P)
 Punct randomFun (Punct P)
 {
     float val = random(0,102);
-    if( val <= 1 )
+    if( val <= 10 )
         return fun1(P);
     else if (val <= 86)
         return fun2(P);
@@ -57,8 +60,9 @@ Punct randomFun (Punct P)
 
 void drawScaledPoint(Punct P, unsigned int aDelay = 0, float lwrScale = -1, float upprScale = 1)
 {
-    float x = map(P.getx(),lwrScale,upprScale,600, 700);
-    float y = map(P.gety(),lwrScale,upprScale,600, 700);
+
+    float x = P.getx() * 100; ///map(P.getx(),lwrScale,upprScale,600, 700);
+    float y = P.gety() * 100; ///map(P.gety(),lwrScale,upprScale,600, 700);
 
     Punct altu(x,y);
     drawPoint(P,aDelay);
@@ -68,7 +72,7 @@ int gm, gd = DETECT;
 
 int main()
 {
-    /*
+
     initgraph(&gd,&gm,"c:\\turboC3\\bgi");
 
     Punct P(1,1);
@@ -76,14 +80,11 @@ int main()
     while (true)
     {
         P = randomFun(P);
-        drawScaledPoint(P,2,-2,3);
+        drawScaledPoint(P,1,-2,3);
 
     }
     getch();
     cleardevice();
-    */
-
-    Punct P(1,1);
 
 
     return 0;

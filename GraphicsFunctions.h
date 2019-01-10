@@ -17,9 +17,9 @@ void drawDot (Punct P, unsigned int aDelay = 0, int color = WHITE)
     if(aDelay > 0) delay(aDelay);
 }
 
-void drawPoint (Punct P, unsigned int aDelay = 0, int color = WHITE)
+void drawPoint (Punct P, unsigned int aDelay = 0, int color = WHITE, int radius = 1)
 {
-    circle(P.getGhX(),P.getGhY(),2);
+    circle(P.getGhX(),P.getGhY(),radius);
     floodfill(P.getGhX(),P.getGhY(),color);
 
     if(aDelay > 0) delay(aDelay);
