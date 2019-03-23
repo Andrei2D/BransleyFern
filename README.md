@@ -1,1 +1,1 @@
-## Video demo<blockquote class="imgur-embed-pub" lang="en" data-id="NCO3sbE"><a href="//imgur.com/NCO3sbE">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>## Slower paced demo<blockquote class="imgur-embed-pub" lang="en" data-id="uXAIem5"><a href="//imgur.com/uXAIem5">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+## Video demo![](Demos/FastDrawing.gif)## Slower paced demo![](Demos/DelayDrawing.gif)
