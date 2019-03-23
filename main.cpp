@@ -75,11 +75,11 @@ int main()
     initgraph(&gd,&gm,"c:\\turboC3\\bgi");
 
     Punct P(1,1);
-
     while (true)
     {
         P = randomFun(P);
-        drawScaledPoint(P,0);
+        drawScaledPoint(P);
+        //delay(1);
 
     }
     getch();
